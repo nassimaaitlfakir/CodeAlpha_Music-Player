@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="intro-page-styles.css">
+        <title>music player</title>
+    </head>
+    <body>
+        <video autoplay muted loop id="background-video">
+            <source src="images-icons/killua-gif.jpg" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container">
+            <p>Want to relive the golden days of your childhood and feel the nostalgia once again?</p>
+            <div class="buttons">
+                <button class="btn yes-button"  id = "yesButton" onclick="nextPage()"></button>
+                <button class="btn no-button" id="noButton" onmouseover="moveButton()" onclick="moveButton()"></button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "music-player.html";
+                    }
+                
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script>
+            
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,175 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-block-color: rgb(228, 228, 228);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px;
+    padding-right: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(40, 80, 133, 0.3);
+    margin-right: 20px;
+}
+
+h1 {
+    color: white;
+    font-family: arial, sans-serif;
+    text-align: center;
+
+}
+
+.song {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-top: 8px;
+    background-color: transparent;
+    transition: background 0.3s ease;
+    cursor: pointer;
+
+}
+
+.song:hover {
+    background-color: transparent;
+    box-shadow: 0 5px 15px rgba(40, 80, 133, 0.3);
+
+}
+
+.song-image {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2px;
+}
+
+.song-description {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+
+
+.player-view {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 90vh;
+    width: 350px;
+    padding-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(40, 80, 133, 0.3);
+    position: relative;
+    margin-left: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: opacity 0.15s;
+    
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+#slider {
+    width: 80%;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    outline: none;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#like-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#like-button:hover {
+    color: red;
+}
+
+#progress-slider {
+    width: 80%;
+    height: 5px;
+    margin: 20px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #05326dd5, #bdd1ec);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#progress-slider::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#progress-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.previous-icon,
+.next-icon,
+.play-icon {
+    height: 35px;
+}

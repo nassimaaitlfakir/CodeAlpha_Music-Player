@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="music-player-styles.css" />
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Favorite Playlist</h1>
+        </div>
+
+        <button class="song" >
+            <div class="song-image-container">
+                <img class="song-image" src="images-icons/hunter.jpg" />
+            </div>
+            <div class="song-description">
+                <p>Hunter X Hunter -القناص</p>
+            </div>
+        </button>
+        <button class="song" >
+            <div class="song-image-container">
+                <img class="song-image" src="images-icons/inazuma-eleven.jpg" />
+            </div>
+            <div class="song-description">
+                <p>Inazuma Eleven-ابطال الكرة</p>
+            </div>
+        </button>
+        <button class="song" >
+            <div class="song-image-container">
+                <img class="song-image" src="images-icons/remi2.jpg" />
+            </div>
+            <div class="song-description">
+                <p>Remi-ريمي</p>
+            </div>
+        </button>
+        <button class="song" >
+            <div class="song-image-container">
+                <img class="song-image" src="images-icons/romeo2.jpg" />
+            </div>
+            <div class="song-description">
+                <p>Romeo's blue skies-عهد الاصدقاء</p>
+            </div>
+        </button>
+        <button class="song" >
+            <div class="song-image-container">
+                <img class="song-image" src="images-icons/digimon.jpg" />
+            </div>
+            <div class="song-description">
+                <p>Digimon Adventure-ابطال الديجيتال</p>
+            </div>
+        </button>
+    </div>
+    <div class="player-view" id="player-view">
+        <div class="controls">
+            <button id="prev">
+                <img src="images-icons/previous-icon.png" class="previous-icon" />
+            </button>
+            <button id="play-pause">
+                <img src="images-icons/play-icon.png" class="play-icon" />
+            </button>
+            <button id="next">
+                <img src="images-icons/next-icon.png" class="next-icon" />
+            </button>
+        </div>
+        <input type="range" id="progress-slider" value="0" />
+        <button id="like-button">♥</button>
+    </div>
+
+    <audio id="audio-player"></audio>
+    <script src="music-player.js"></script>
+</body>
+
+</html>
